@@ -1,4 +1,3 @@
-//% color=#cccc00 icon="\uf0c3" block="BitJens"
 namespace bitjens {
 
     export enum BeepCode {
@@ -31,14 +30,14 @@ namespace bitjens {
                 music.playTone(1500, 400)
                 break;
             case BeepCode.Reject:
-                music.playTone(1500, 150)
+                music.playTone(1500, 200)
                 basic.pause(50)
                 music.playTone(1000, 90)
                 basic.pause(50)
                 music.playTone(1000, 90)
                 break;
             case BeepCode.Accept:
-                music.playTone(1000, 150)
+                music.playTone(1000, 200)
                 basic.pause(50)
                 music.playTone(1500, 90)
                 basic.pause(50)
