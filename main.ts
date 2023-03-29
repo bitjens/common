@@ -1,7 +1,7 @@
 /**
  * 
  */
-//% block="BitJens: Common"
+//% block="BJ: Common"
 //% color=#cccc00 icon="\uf0c3" 
 namespace bitjens {
 
