@@ -1,8 +1,9 @@
 /**
  * 
  */
-//% block="BJ: Common"
+//% block="BitJens"
 //% color=#cccc00 icon="\uf0c3" 
+//% groups=["Generelt"]
 namespace bitjens {
 
     export enum BeepCode {
@@ -17,6 +18,7 @@ namespace bitjens {
     }
 
     //% block="BitJens: Afspil bip-kode $code"
+    //% group="Generelt"
     //% code.defl=bitjens.BeepCode.Begin
     export function beepcode(code: BeepCode) {
         switch (code) {
