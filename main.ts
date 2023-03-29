@@ -1,3 +1,4 @@
+//% color=#cccc00 icon="\uf0c3" block="BitJens"
 namespace bitjens {
 
     export enum BeepCode {
