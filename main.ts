@@ -1,3 +1,4 @@
+enum bitjens_common_dummy {}
 /**
  * 
  */
