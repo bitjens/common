@@ -3,7 +3,6 @@
  */
 //% block="BitJens"
 //% color=#cccc00 icon="\uf0c3" 
-//% groups=["Generelt"]
 namespace bitjens {
 
     export enum BeepCode {
