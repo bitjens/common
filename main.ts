@@ -1,8 +1,8 @@
-enum bitjens_common_dummy {}
 /**
  * 
  */
-//% color=#cccc00 icon="\uf0c3" block="BitJens"
+//% block="BitJens: Common"
+//% color=#cccc00 icon="\uf0c3" 
 namespace bitjens {
 
     export enum BeepCode {
