@@ -5,6 +5,13 @@
 //% color=#cccc00 icon="\uf0c3" 
 namespace bitjens {
 
+    enum _notes {
+        CSharp6 = 1108,
+        DSharp6 = 1244,
+        FSharp6 = 1480,
+    }
+    let _beepnotes = [_notes.CSharp6, _notes.DSharp6, _notes.FSharp6]
+
     export enum BeepCode {
         //% enumval=0 block=Start
         Begin = 0,
@@ -22,32 +29,32 @@ namespace bitjens {
     export function beepcode(code: BeepCode) {
         switch (code) {
             case BeepCode.Begin:
-                music.playTone(1000, 90)
+                music.playTone(_beepnotes[0], 90)
                 basic.pause(50)
-                music.playTone(1200, 90)
+                music.playTone(_beepnotes[1], 90)
                 basic.pause(50)
-                music.playTone(1500, 400)
+                music.playTone(_beepnotes[2], 400)
                 break;
             case BeepCode.End:
-                music.playTone(1500, 90)
+                music.playTone(_beepnotes[2], 90)
                 basic.pause(50)
-                music.playTone(1200, 90)
+                music.playTone(_beepnotes[1], 90)
                 basic.pause(50)
-                music.playTone(1000, 400)
+                music.playTone(_beepnotes[0], 400)
                 break;
             case BeepCode.Accept:
-                music.playTone(1000, 200)
+                music.playTone(_beepnotes[0], 200)
                 basic.pause(50)
-                music.playTone(1500, 90)
+                music.playTone(_beepnotes[2], 90)
                 basic.pause(50)
-                music.playTone(1500, 90)
+                music.playTone(_beepnotes[2], 90)
                 break;
             case BeepCode.Reject:
-                music.playTone(1500, 200)
+                music.playTone(_beepnotes[2], 200)
                 basic.pause(50)
-                music.playTone(1000, 90)
+                music.playTone(_beepnotes[0], 90)
                 basic.pause(50)
-                music.playTone(1000, 90)
+                music.playTone(_beepnotes[0], 90)
                 break;
         }
     }
