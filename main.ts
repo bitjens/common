@@ -15,7 +15,7 @@ namespace bitjens {
         F6 = 1397,
         FSharp6 = 1480,
     }
-    let _beepnotes = [_notes.C6, _notes.D6, _notes.FSharp6]
+    let _beepnotes = [_notes.C6, _notes.DSharp6, _notes.FSharp6]
 
     export enum BeepCode {
         //% enumval=0 block=Start
