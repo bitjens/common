@@ -15,7 +15,11 @@ namespace bitjens {
         F6 = 1397,
         FSharp6 = 1480,
     }
-    let _beepnotes = [_notes.C6, _notes.DSharp6, _notes.FSharp6]
+
+    
+    let _beepcode_notes = [_notes.C6, _notes.DSharp6, _notes.FSharp6]
+    let _beepcode_lengths = [90, 200, 400]
+    let _beepcode_pause = 50
 
     export enum BeepCode {
         //% enumval=0 block=Start
@@ -34,32 +38,32 @@ namespace bitjens {
     export function beepcode(code: BeepCode) {
         switch (code) {
             case BeepCode.Begin:
-                music.playTone(_beepnotes[0], 90)
-                basic.pause(50)
-                music.playTone(_beepnotes[1], 90)
-                basic.pause(50)
-                music.playTone(_beepnotes[2], 400)
+                music.playTone(_beepcode_notes[0], _beepcode_lengths[0])
+                basic.pause(_beepcode_pause)
+                music.playTone(_beepcode_notes[1], _beepcode_lengths[0])
+                basic.pause(_beepcode_pause)
+                music.playTone(_beepcode_notes[2], _beepcode_lengths[2])
                 break;
             case BeepCode.End:
-                music.playTone(_beepnotes[2], 90)
-                basic.pause(50)
-                music.playTone(_beepnotes[1], 90)
-                basic.pause(50)
-                music.playTone(_beepnotes[0], 400)
+                music.playTone(_beepcode_notes[2], _beepcode_lengths[0])
+                basic.pause(_beepcode_pause)
+                music.playTone(_beepcode_notes[1], _beepcode_lengths[0])
+                basic.pause(_beepcode_pause)
+                music.playTone(_beepcode_notes[0], _beepcode_lengths[2])
                 break;
             case BeepCode.Accept:
-                music.playTone(_beepnotes[0], 200)
-                basic.pause(50)
-                music.playTone(_beepnotes[2], 90)
-                basic.pause(50)
-                music.playTone(_beepnotes[2], 90)
+                music.playTone(_beepcode_notes[0], _beepcode_lengths[1])
+                basic.pause(_beepcode_pause)
+                music.playTone(_beepcode_notes[2], _beepcode_lengths[0])
+                basic.pause(_beepcode_pause)
+                music.playTone(_beepcode_notes[2], _beepcode_lengths[0])
                 break;
             case BeepCode.Reject:
-                music.playTone(_beepnotes[2], 200)
-                basic.pause(50)
-                music.playTone(_beepnotes[0], 90)
-                basic.pause(50)
-                music.playTone(_beepnotes[0], 90)
+                music.playTone(_beepcode_notes[2], _beepcode_lengths[1])
+                basic.pause(_beepcode_pause)
+                music.playTone(_beepcode_notes[0], _beepcode_lengths[0])
+                basic.pause(_beepcode_pause)
+                music.playTone(_beepcode_notes[0], _beepcode_lengths[0])
                 break;
         }
     }
