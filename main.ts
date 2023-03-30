@@ -6,11 +6,16 @@
 namespace bitjens {
 
     enum _notes {
+        B5 = 988,
+        C6 = 1047,
         CSharp6 = 1108,
+        D6 = 1175,
         DSharp6 = 1244,
+        E6 = 1319,
+        F6 = 1397,
         FSharp6 = 1480,
     }
-    let _beepnotes = [_notes.CSharp6, _notes.DSharp6, _notes.FSharp6]
+    let _beepnotes = [_notes.C6, _notes.D6, _notes.F6]
 
     export enum BeepCode {
         //% enumval=0 block=Start
